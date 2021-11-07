@@ -1,0 +1,3 @@
+// como adicionar ratigns em Schema
+// como definir year em Schema
+// problema com id de obj criado no post
