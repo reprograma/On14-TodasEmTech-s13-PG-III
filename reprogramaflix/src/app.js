@@ -4,13 +4,16 @@ const cors = require("cors");
 require("dotenv-safe").config();
 const db = require("./database/mongoConfig");
 
-const noteRoutes = require("./routes/noteRoutes");
+const seriesRoutes = require("./routes/seriesRoutes");
+const moviesRoutes = require("./routes/moviesRoutes");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/notes", noteRoutes);
+
+app.use("/series", seriesRoutes);
+app.use("/movies", moviesRoutes);
 
 db.connect();
 
