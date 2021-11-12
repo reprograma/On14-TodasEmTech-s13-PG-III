@@ -12,9 +12,14 @@ const getAll = async (req,res) => {
 
 const getById = async (req,res) => {
     try {
-        const series = await SeriesSchema.findById(req.params.id) //PRECISO MESMO DE req.params.id
-        res.status(200).send(series)
-
+        const series = await SeriesSchema.findById(req.params.id) 
+        
+        if(series){
+            res.status(200).send(series)
+        }else{
+            res.status(404).json({message: "Série não encontrada"})
+        }
+        
     } catch (error) {
         res.status(500).send(error.message);
     }
@@ -53,20 +58,33 @@ const update = async (req, res) => {
             series.poster = req.query.poster || series.poster
             series.actors = req.query.actors || series.actors
             series.ratings = req.query.ratings || series.ratings
+
+            const savedSeries = await series.save();
+            res.status(200).send(savedSeries);
+
+        }else{
+            res.status(404).json({message: "Série não encontrada"}) 
         }
 
-        const savedSeries = await series.save();
-        res.status(200).send(savedSeries);
     } catch (error) {
         res.status(500).send(error.message);
     }
 }
 
 const remove = async (req,res) => {
-    const series = await SeriesSchema.findById(req.params.id)
+    try {
+        const series = await SeriesSchema.findById(req.params.id)
 
-    const deletedSeries = await series.remove()
-    res.status(200).send(deletedSeries)
+        if(series){
+            const deletedSeries = await series.remove()
+        res.status(200).send(deletedSeries)
+        }else{
+            res.status(404).json({message: "Série não encontrada"}) 
+        }
+
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
 }
 
 module.exports = {

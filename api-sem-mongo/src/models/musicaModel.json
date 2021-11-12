@@ -1,0 +1,14 @@
+[
+    {
+        "artista" : "Anita",
+        "album" : "Girl from rio",
+        "titulo": "Girl from rio",
+        "ano" : 2020
+    },
+    {
+        "artista" : "Djavan",
+        "album" : "",
+        "titulo": "nem um dia",
+        "ano" : 2003
+    }
+]
