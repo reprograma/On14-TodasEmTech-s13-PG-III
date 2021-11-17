@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
-app.use("/notes", noteRoutes)
+app.use("/cultural", noteRoutes)
 
 db.connect() 
 

@@ -1,11 +1,11 @@
 {
-  "name": "reprograma-notepad",
+  "name": "para-o-lar",
   "version": "1.0.0",
-  "description": "",
+  "description": "<img src=\"./assets/turismo.png\" width=\"100%\">",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,11 +13,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv-safe": "^8.2.0",
-    "dotenv-save": "^1.2.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.12"
-  },
-  "devDependencies": {
+    "mongoose": "^6.0.13",
     "nodemon": "^2.0.15"
   }
 }
