@@ -1,6 +1,9 @@
+//inicialização do Banco de Dados
+
 const mongoose = require('mongoose');
 
-const MONGODB_URI = "mongodb+srv://usuario:12345@cluster0.dn30n.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+//abaixo: endereço de conexão 
+const MONGODB_URI = "mongodb+srv://JeniAlves:eejer123.@cluster0.sg5sn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 const connect = async () => {
     try {

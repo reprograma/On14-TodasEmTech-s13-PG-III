@@ -1,7 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 
-require('dotenv-safe').config()
+require('dotenv-safe').config() //imp informações do pacote packegeJson.
+
 const db = require('./database/mongoConfig')
 
 const noteRoutes = require('./routes/noteRoutes')
