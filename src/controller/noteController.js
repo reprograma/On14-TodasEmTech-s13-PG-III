@@ -1,3 +1,5 @@
+const { Mongoose } = require('mongoose')
+const noteSchema = require('../models/noteSchema')
 const NoteSchema = require('../models/noteSchema')
 
 const getAll = async (req, res) => {
@@ -11,6 +13,17 @@ const getAll = async (req, res) => {
         })
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = {
     getAll
