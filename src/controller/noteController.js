@@ -31,7 +31,7 @@ const createNote = async (req, res) => {
             message: error.message
         })
     }
-}
+};
 
 // criar método para atualizar informações de uma nota
 const updateNoteById = async (req, res) => {
@@ -55,7 +55,7 @@ const updateNoteById = async (req, res) => {
     } catch (error) {
         
     }
-}
+};
 
 module.exports = {
     getAll,
