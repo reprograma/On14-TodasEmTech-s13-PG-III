@@ -12,4 +12,7 @@ router.post("/create", controller.createNote)
 // DEMANDA: atualizar uma nota
 router.patch("/update/:id", controller.updateNoteById)
 
+// DEMANDA: excluir uma nota
+router.delete("/delete/:id", controller.deleteNoteById)
+
 module.exports = router

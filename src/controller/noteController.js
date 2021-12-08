@@ -57,8 +57,26 @@ const updateNoteById = async (req, res) => {
     }
 }
 
+const deleteNoteById = async (req, res) => {
+    try {
+        const noteFound = await NoteSchema.findById(req.params.id)
+
+       await noteFound.delete()
+
+       res.status(200).json({
+           mensagem: `Nota '${noteFound.title}' deletada com sucesso!`
+       })
+
+    } catch (err) {
+        res.status(400).json({
+            mensagem: err.message
+        })
+    }
+}
+
 module.exports = {
     getAll,
     createNote,
-    updateNoteById
+    updateNoteById, 
+    deleteNoteById
 }
