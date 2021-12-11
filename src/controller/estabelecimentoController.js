@@ -34,7 +34,7 @@ const createEstabelecimento = async (req, res) => {
 
         const savedEstabelecimento = await newEstabelecimento.save()
         res.status(200).json({
-            message: "nota adicionada com sucesso!",
+            message: "estabelecimento adicionado com sucesso!",
             savedEstabelecimento
         })
 
